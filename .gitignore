@@ -2,6 +2,8 @@
 
 *.tar.gz
 
+*.tar
+
 *.zip
 
 *.tif
@@ -13,6 +15,8 @@ VisIt
 validation_data
 
 conda_envs
+
+time_varying_data/aws/
 
 calsim
 slurm-*.out
