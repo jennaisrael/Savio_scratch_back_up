@@ -1,0 +1,71 @@
+###W&M Savio cluster
+#  Set the base name of the executable.
+#  The main reason for this is to include something like a cluster/architecture name.
+#  Do not add the file extension (none for linux, .exe for Windows etc)
+#  or the list of enabled modules, both of which will be automatically appended.
+set (SCHISM_EXE_BASENAME pschism_WW CACHE STRING "Base name (modules and file extension to be added of the executable. If you want a machine name, add it here")
+
+
+
+##########################  LOCATIONS #########################################################
+#
+# LOCATIONS: Set locations for NetCDF (possibly HDF5 if NetCDF links to it), ParMetis, PETSc
+#            You don't need to set these if they are in your environment
+#
+#            Only the library home location is needed and the /lib or /bin part will be inferred.
+#            Generally traditional structure is assumed, but the Parmetis and GOTM libraries
+#            that are included have a slightly different structure
+#
+#            You only need GOTM if you intend to use it with USE_GOTM
+#            GOTM and ParMetis local copies will be found automatically, but also can overridden
+#            You have to build them
+#
+
+###Relative paths won't work
+#set(CMAKE_Fortran_COMPILER/global/software/rocky-8.x86_64/intel/linux-rocky8-x86_64/gcc-8.5.0/intel-oneapi-compilers-2023.1.0-r4a6uortiv3h72lh7qjnr4yiuc7vyyut/compiler/2023.1.0/linux/bin/intel64/ifort CACHE PATH "Path to serial Fortran compiler")
+set(CMAKE_Fortran_COMPILER CACHE PATH "Path to serial Fortran compiler")
+
+#set(MPI_ROOT "/global/software/sl-7.x86_64/modfiles/gcc/6.3.0/openmpi/3.0.1-gcc" CACHE PATH "Root dir of MPI implementation")
+
+#set(NetCDF_C_DIR  "/global/software/sl-7.x86_64/modfiles/gcc/6.3.0/netcdf/4.4.1.1-gcc-s"  CACHE PATH "Path to NetCDF C library")
+
+# set(NetCDF_C_DIR  "$ENV{NETCDF}"  CACHE PATH "Path to NetCDF C library")
+#set(NetCDF_C_DIR  "/global/software/sl-7.x86_64/modfiles/gcc/11.3.0/netcdf/4.9.0-gcc-p"  CACHE PATH "Path to NetCDF C library")
+
+
+###MPI_ROOT is only needed when cmake is having trouble finding write MPI wrapper
+#set(MPI_ROOT /global/software/sl-7.x86_64/modfiles/intel/oneapi-2022.2/scg/openmpi/4.1.3  CACHE PATH "Root dir of MPI implementation")
+set(MPI_ROOT /global/software/rocky-8.x86_64/modfiles/intel-oneapi-mpi  CACHE PATH "Root dir of MPI implementation")
+
+#/global/software/rocky-8.x86_64/intel/linux-rocky8-x86_64/oneapi-2023.1.0/intel-oneapi-mpi-2021.10.0-fyiu4qb6ynfuln64owifv6ndwcv3s6d2/lib/libmpifort.so
+#set(HDF5_DIR  /opt/hdf5/1.10.4-intel64 CACHE PATH "Path to HDF5")
+#set(SZIP_DIR /opt/szip/2.1.1-intel64 CACHE PATH "Path to SZip compression library")
+
+
+######################## COMPILE AND BUILD OPTIONS ##############################################
+#
+# BUILD OPTS: Use this to set compiler flags any way you want.For models of how to set flags, 
+#             see SCHISMCompile.cmake, which are the project defaults.
+#
+#             If you are setting up a new platform/compiler combo rather than customizing, 
+#             you might consider adding to SCHISMCompile.cmake with the correct "IF" so 
+#             others can profit from your work.
+#             
+#             If what you are doing is debugging, consider using -DBUILD_TYPE=Debug and using the default
+#             debug flags. Note that there is yet another build type for release plus symbols.
+#
+#             So far I have removed -Bstatic because it is causes problems and cmake seems to do enough
+#             magically.
+#
+#################################################################################################
+
+
+###Compile flags
+# sw commented out feb 22 
+#set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -mcmodel=medium -assume byterecl" CACHE STRING "Fortran flags" FORCE)
+
+##For final linking: this is only needed in exordinary cases
+#set(CMAKE_EXE_LINKER_FLAGS "" CACHE STRING "linker" FORCE)
+
+###MPI_VERSION cannot be set here; use -DMPIVERSION=XX in cmake cmd instead
+#set(MPI_VERSION CACHE STRING  "1")
