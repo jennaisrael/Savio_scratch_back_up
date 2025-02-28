@@ -22,5 +22,9 @@ conda_envs
 
 time_varying_data/aws/
 
+validation_data/screened/
+
+validation_data/*.csv
+validation_data/*.png
 calsim
 slurm-*.out
