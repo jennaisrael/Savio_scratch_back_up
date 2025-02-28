@@ -14,15 +14,24 @@
 
 *.tfw
 
+BayDeltaSCHISM
+build
+calsim
+conda_envs
+delta
+DeltaCD
+dms_datastore
+envs
+fc_esdl
+HelloSCHISM
+pyschism
+run_schism
+schism
+slurm
+slurm_group_dir
+time_varying_data/aws
+validation_data
 VisIt
 
-conda_envs
 
-time_varying_data/aws/
-
-validation_data/screened/
-
-validation_data/*.csv
-validation_data/*.png
-calsim
 slurm-*.out
