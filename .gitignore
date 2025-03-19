@@ -14,6 +14,7 @@
 
 *.tfw
 
+.local
 BayDeltaSCHISM
 build
 calsim
