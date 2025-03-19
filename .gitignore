@@ -32,6 +32,7 @@ schism_scripts_scratch
 slurm
 slurm_group_dir
 time_varying_data/aws
+time_varying_data/tide_gauge_data
 validation_data
 VisIt
 
