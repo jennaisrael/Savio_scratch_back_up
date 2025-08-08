@@ -43,7 +43,7 @@ climate_data_processing/identify_stp/*.csv
 climate_data_processing/sl_regression/*.csv
 sav_for_schism/
 second_backup_group_dir_schism_scripts/
-
+backup_group_dir_schism_scripts/
 
 *nohup*.out
 slurm-*.out
