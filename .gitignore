@@ -33,8 +33,17 @@ slurm
 slurm_group_dir
 time_varying_data/aws
 time_varying_data/tide_gauge_data
+time_varying_data/cirrus_LOCA2/
+time_varying_data/era5
+time_varying_data/test_cirrus
 validation_data
 VisIt
+UTide
+climate_data_processing/identify_stp/*.csv
+climate_data_processing/sl_regression/*.csv
+sav_for_schism/
+second_backup_group_dir_schism_scripts/
 
 
+*nohup*.out
 slurm-*.out
