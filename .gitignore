@@ -36,6 +36,8 @@ time_varying_data/tide_gauge_data
 time_varying_data/cirrus_LOCA2/
 time_varying_data/era5
 time_varying_data/test_cirrus
+time_varying_data/cleaned_cirrus_LOCA2/
+time_varying_data/sl_regression/
 validation_data
 VisIt
 UTide
