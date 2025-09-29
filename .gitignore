@@ -28,6 +28,7 @@ HelloSCHISM
 pyschism
 run_schism
 schism
+schimpy
 schism_scripts_scratch
 slurm
 slurm_group_dir
@@ -43,6 +44,7 @@ VisIt
 UTide
 climate_data_processing/identify_stp/*.csv
 climate_data_processing/sl_regression/*.csv
+climate_data_processing/test_Lily_code/
 sav_for_schism/
 second_backup_group_dir_schism_scripts/
 backup_group_dir_schism_scripts/
