@@ -112,7 +112,8 @@ module list
 
 #cd /global/home/groups/fc_esdl/compiling/schism5.10/schism
 #go to directory where SCHISM drive is
-cd /expanse/lustre/scratch/jisrael/temp_project/schism
+cd /home/jisrael/schism/
+#cd /expanse/lustre/scratch/jisrael/temp_project/schism
 # Delete old build director.y 
 rm -r build/
 mkdir build/
@@ -125,6 +126,6 @@ echo -e "\n\n\n\n now running make..."
 
 make -j16 pschism
 
-cd Utilities 
+cd Utilities #this directory gets created when schism is compiled
 make -j16 
 # make VERBOSE=1 pschism
