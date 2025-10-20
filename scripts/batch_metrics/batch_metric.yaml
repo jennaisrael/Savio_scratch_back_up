@@ -3,53 +3,61 @@
 # These are used for names of columns and as such there are expectations on some added info in those files that are automatic
 # if you use schimpy but not part of the schism specification.
 
-outputs_dir: /global/scratch/users/jennaisrael/validation_data/run_26_bc_plots_intermediate_2/    # location of the directory where staout_* and flux.out are. If in place, could be my_study/outputs
+outputs_dir:
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_13/outputs
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_14/outputs # location of the directory where staout_* and flux.out are. If in place, could be my_study/outputs
  #- other    # For more than one, will need corresponding entries in "station_input, "flow_station_input" and "labels"
 
 # Name of the station database. Recommend you get dms_datastore and use station_dbase.csv
-stations_csv: /global/scratch/users/jennaisrael/dms_datastore/dms_datastore/config_data/station_dbase.csv
+stations_csv: /home/jisrael/dms_datastore/dms_datastore/config_data/station_dbase.csv
 
 obs_search_path: #/global/scratch/users/jennaisrael/validation_data/screened/
-  - /global/scratch/users/jennaisrael/validation_data/screened/
+ - /expanse/lustre/scratch/jisrael/temp_project/validation_data/screened/
 
 station_input: 
- - /global/scratch/users/jennaisrael/validation_data/run_26_bc_plots_intermediate_2/station.in 
- #- other/station.in
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_13/station.in 
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_14/station.in
+   #- other/station.in
  
 flow_station_input:
- - /global/scratch/users/jennaisrael/validation_data/run_26_bc_plots_intermediate_2/fluxflag.prop  
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_13/fluxflag.prop
+ - /expanse/lustre/scratch/jisrael/temp_project/run_schism/run_14/fluxflag.prop  
  
  
 # Links between model names and database of the field data
-obs_links_csv: /global/scratch/users/jennaisrael/validation_data/obs_links_screened_20240517.csv
-time_basis:  2014-03-30  # ISO date format (e.g. 2009-05-05)
-start_inst:  2014-03-30  # Instantaneous plot
-end_inst:    2014-10-28  # 
-start_avg:   2014-05-30  # Tidally filtered plot and metrics
-end_avg:     2014-10-28  # Metrics are not valid until a season of reasonable variation has passed.
+obs_links_csv: /expanse/lustre/scratch/jisrael/temp_project/validation_data/obs_links_screened_20240517.csv
+time_basis:  2020-09-10  # ISO date format (e.g. 2009-05-05)
+start_inst:  2020-09-10  # Instantaneous plot
+end_inst:    2020-11-30  # 
+start_avg:   2020-09-24  # Tidally filtered plot and metrics
+end_avg:     2020-11-14  # Metrics are not valid until a season of reasonable variation has passed.
 
 # variable is the variable compared. elev is easiest, then flow, then salt/temp.
 variable: salt # one of elev, flow, salt temp
 labels:        
   - Observed  # Label for observations
-  - Model
+  - hist
+  - event removed
 
 # These are the easier stations, which should perform pretty weil. 
 selected_stations:
-  - srv
-  - mrz
-  - cll  
+        #- srv
+        #- mrz
+        #- cll  
   - jer
   - sffpx   # This is the name of San Francisco in the buoy program  
-  - anh
-  - mrz
+    #- anh
+    #- mrz
   - bdl     # Not as easy, because marsh is subject to input issues but pertinent to discovering issues in the marsh
   - emm
+  - hol2
+  - frk
+ 
 
 
 
 plot_all: False        # If plot_all is True, every station in station.in is plotted even if no field data
 max_gap_to_fill: 2h    # Missing data eats a hole in tidal averaged data. 2h is a fairly agressive amount of filling for tidal values
 remove_outliers: False  # This does superseded quality control. Screened data will not benefit
-write_csv: True
+write_csv: False
 #palette: simple # this threw an error
