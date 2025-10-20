@@ -48,6 +48,7 @@ climate_data_processing/test_Lily_code/
 sav_for_schism/
 second_backup_group_dir_schism_scripts/
 backup_group_dir_schism_scripts/
+expanse_sync/
 
 *nohup*.out
 slurm-*.out
