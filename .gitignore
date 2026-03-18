@@ -36,5 +36,6 @@ time_varying_data/tide_gauge_data
 validation_data
 VisIt
 Plotting/expanse/high_res_plots/
-
+scripts/batch_metrics
 slurm-*.out
+scripts/preprocessing_scripts/prio_ts/
