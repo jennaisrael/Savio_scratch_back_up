@@ -6,7 +6,7 @@ import xarray as xr
 # Define the parser
 parser = argparse.ArgumentParser(description='Stitch nudging nc files together for temperature and salinity')
 
-parser.add_argument('--exts', nargs="+", action="store", dest='exts', default='cencoos' 'hycom')
+parser.add_argument('--exts', nargs="+", action="store", dest='exts', default=['cencoos','hycom'])
 parser.add_argument('--path2nudging', action="store", dest='path2nudging', default="./")
 parser.add_argument('--writepath', action="store", dest='writepath', default=None)
 
