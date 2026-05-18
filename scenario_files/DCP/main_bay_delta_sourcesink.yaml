@@ -1,0 +1,25 @@
+# modified for just adding an additional sink to source_sink.in
+
+mesh:
+  # a preexisting SCHISM hgrid.gr3
+  mesh_inputfile: hgrid.gr3
+
+sources_sinks:
+  # Includes Delta and Suisun, including distribution modifications in 2020.
+  # See the _2019 variant for older locations
+  sinks:
+    include:
+    - sink_dcd.yaml
+    - sink_dcp.yaml
+      # - sink_mss.yaml       # comment out if not using MSS
+      #- sink_nullzone.yaml  # comment out if not using MSS
+    - sink_suisun.yaml
+  sources:
+    include:
+    - source_dcd.yaml
+      # - source_mss.yaml     # comment out if not using MSS
+    - source_suisun.yaml
+      #- source_potw.yaml    # comment out if not using MSS
+  outputfile: source_sink.in
+
+prepro_output_dir: ./prepro_out
