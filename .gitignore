@@ -50,5 +50,6 @@ second_backup_group_dir_schism_scripts/
 backup_group_dir_schism_scripts/
 expanse_sync/
 expanse_runs/
+Debugging/
 *nohup*.out
 slurm-*.out
