@@ -39,6 +39,7 @@ time_varying_data/era5
 time_varying_data/test_cirrus
 time_varying_data/cleaned_cirrus_LOCA2/
 time_varying_data/sl_regression/
+time_varying_data/source_sink/bdschism/
 validation_data
 VisIt
 UTide
