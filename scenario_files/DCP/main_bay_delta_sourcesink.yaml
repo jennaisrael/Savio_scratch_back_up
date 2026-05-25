@@ -10,7 +10,7 @@ sources_sinks:
   sinks:
     include:
     - sink_dcd.yaml
-    - sink_dcp.yaml
+    - sink_dcp_12.yaml
       # - sink_mss.yaml       # comment out if not using MSS
       #- sink_nullzone.yaml  # comment out if not using MSS
     - sink_suisun.yaml
@@ -22,4 +22,4 @@ sources_sinks:
       #- source_potw.yaml    # comment out if not using MSS
   outputfile: source_sink.in
 
-prepro_output_dir: ./prepro_out
+prepro_output_dir: ./prepro_out_12
