@@ -42,8 +42,10 @@
 ##### STILL DEBUGGING 
 #updated list as of July 2024
 module purge
-module load intel-oneapi-compilers/2023.1.0
-module load intel-oneapi-mpi/2021.10.0 
+module load intel-oneapi-compilers/2025.2.1
+module load intel-oneapi-mpi/2021.16.1
+#module load intel-oneapi-compilers/2023.1.0
+#module load intel-oneapi-mpi/2021.10.0 
 #module load gcc/10.5.0 #module spider openmpi/4.1.3 said I needed this module loaded first
 #module load openmpi/4.1.3
 #export JASPERLIB=/global/home/groups/consultsw/sl-7.x86_64/modules/jasper/2.0.14/lib64
@@ -65,8 +67,10 @@ module load cmake/3.27.7
 #export LAPACK=/global/home/groups/consultsw/sl-7.x86_64/modules/lapack/3.8.0 #this does not have lib and include directories, libblas.so  libblas.so.3  liblapack.a  liblapack.so  liblapack.so.3  libtmglib.a  libtmglib.so
 
 #module unload openmpi/4.1.6
-module load netcdf-c/4.9.2
-module load netcdf-fortran/4.6.1
+#module load netcdf-c/4.9.2
+module load netcdf-c/4.9.3
+module load netcdf-fortran/4.6.2
+#module load netcdf-fortran/4.6.1
 #module load anaconda3/2024.02-1-11.4
 #module load python
 module list
