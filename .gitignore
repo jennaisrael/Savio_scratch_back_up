@@ -54,3 +54,4 @@ expanse_runs/
 Debugging/
 *nohup*.out
 slurm-*.out
+vtools3/
